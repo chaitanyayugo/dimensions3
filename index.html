@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dimensions | The Luxury 3D Experience</title>
+  <meta name="description" content="360° standard in luxury seating — bespoke finishes, Italian heritage, and anatomical precision." />
+  <!-- Preconnect fonts for faster first render -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessible loader (shown until page ready) -->
+  <div id="loader" role="status" aria-live="polite" aria-label="Loading content">
+    <div class="loader-content">
+      <h1 class="loader-logo">DIMENSIONS</h1>
+      <div class="loader-bar" id="loader-bar"><div class="loader-inner"></div></div>
+    </div>
+  </div>
+
+  <div class="progress-container" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
+  <div class="artistic-bg" aria-hidden="true"></div>
+  <div id="dust-container" aria-hidden="true"></div>
+
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="logo">DIMENSIONS</div>
+    <div class="nav-links" role="menubar" aria-label="Primary">
+      <a href="#gallery" role="menuitem">Gallery</a>
+      <a href="#heritage" role="menuitem">Heritage</a>
+      <a href="#reserve" class="reserve-link" role="menuitem">Reserve Now</a>
+    </div>
+  </nav>
+
+  <div class="sofa-wrapper" aria-hidden="false">
+    <!-- responsive picture: webp first, fallback to png/jpg -->
+    <picture>
+      <source srcset="assets/sofa-900.webp 900w, assets/sofa-1200.webp 1200w" type="image/webp">
+      <img id="animated-sofa" src="assets/sofa-900.jpg" alt="Luxury sofa in studio" loading="lazy" decoding="async" width="1200" height="700">
+    </picture>
+    <div id="sofa-shadow" aria-hidden="true"></div>
+  </div>
+
+  <div class="configurator" aria-label="Material configurator">
+    <p class="config-label">Bespoke Finish</p>
+    <div class="swatch-container" role="list">
+      <button class="swatch active" role="listitem" data-color="original" aria-pressed="true" title="Original" style="background:#4a4a4a"></button>
+      <button class="swatch" role="listitem" data-color="royal-gold" aria-pressed="false" title="Royal Gold" style="background:#d4af37"></button>
+      <button class="swatch" role="listitem" data-color="deep-velvet" aria-pressed="false" title="Deep Velvet" style="background:#4a0e0e"></button>
+    </div>
+  </div>
+
+  <main class="scroll-container">
+    <section class="panel center-text">
+      <div class="hero-box reveal">
+        <h1>The <span class="gold-text">360°</span> Standard</h1>
+        <p>Scroll to enter the new dimension of comfort.</p>
+      </div>
+    </section>
+
+    <section class="panel left-text">
+      <div class="content-box reveal">
+        <span class="step-num">01</span>
+        <h2>Anatomical Precision</h2>
+        <p>1. Contoured lumbar support system.<br>2. Pressure-sensitive memory foam base.</p>
+      </div>
+    </section>
+
+    <section class="panel right-text">
+      <div class="content-box reveal">
+        <span class="step-num">02</span>
+        <h2>Italian Heritage</h2>
+        <p>3. Full-grain Tuscan leather.<br>4. Hand-stitched silk threading.</p>
+      </div>
+    </section>
+
+    <section class="panel left-text">
+      <div class="content-box reveal">
+        <span class="step-num">03</span>
+        <h2>Eternal Framework</h2>
+        <p>5. Solid Grade-A Walnut chassis.<br>6. Reinforced carbon-steel joints.</p>
+      </div>
+    </section>
+
+    <section class="panel right-text">
+      <div class="content-box reveal">
+        <span class="step-num">04</span>
+        <h2>Smart Integration</h2>
+        <p>7. Invisible wireless charging ports.<br>8. Adaptive thermal regulation fabric.</p>
+      </div>
+    </section>
+
+    <section class="panel left-text">
+      <div class="content-box reveal">
+        <span class="step-num">05</span>
+        <h2>Master Craftsmanship</h2>
+        <p>9. 48 hours of hand-polishing per unit.<br>10. Individually numbered gold plaque.</p>
+      </div>
+    </section>
+
+    <section class="panel right-text">
+      <div class="content-box reveal">
+        <span class="step-num">06</span>
+        <h2>Bespoke Finishes</h2>
+        <p>Tailored to your architectural palette with over 500 texture combinations.</p>
+      </div>
+    </section>
+
+    <section class="panel center-text">
+      <div class="hero-box reveal">
+        <h1>Pure <span class="gold-text">Elegance</span></h1>
+        <div class="cta-button-container">
+          <a href="#reserve" class="cta-button">Secure Your Piece</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Defer heavy scripts so they don't block first paint -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>
